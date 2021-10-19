@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>Projeto_Hotel_Transacional_v3</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="Hotel_Review" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/hotel_reviews" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="postgres" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="0ebd9d34-d159-4afc-ad87-e940ecbfb565" dbcs-ref="DS2" name="Hotel_Review" physicalName="Hotel_Review" >
+   <catalog id="CAT1" populated="true" UUID="6f933398-f289-4a80-bbc3-74ae93fda811" name="hotel_reviews" nativeTerm="database" physicalName="hotel_reviews" >
+    <schema id="SCH2" populated="true" UUID="683ef6e1-136f-4e68-a838-c17e8b24afc2" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="true" UUID="38949021-068b-4f27-892c-5130b2a20a2c" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="true" UUID="cafdc0c9-ecf4-48de-a072-13dc9e860bbe" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB5" populated="true" UUID="7e9d8b87-f098-4557-8225-1238e65d1da6" name="avaliacao" objectType="TABLE" physicalName="avaliacao" >
+      <remarks></remarks>
+      <folder id="FOLTAB51" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL6" populated="true" UUID="e91b864c-dcb8-46bd-b77a-6e000e4c2698" autoIncrement="true" defaultValue="nextval(&apos;avaliacao_id_avaliacao_seq&apos;::regclass)" name="id_avaliacao" nullable="0" physicalName="id_avaliacao" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL7" populated="true" UUID="61d10958-5c50-4c50-a5d8-50d50c477c2e" autoIncrement="false" defaultValue="" name="id_hotel" nullable="0" physicalName="id_hotel" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="82eaa8b8-f116-441a-80d8-323005e57a28" autoIncrement="false" defaultValue="" name="data" nullable="0" physicalName="data" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL9" populated="true" UUID="eba5c064-eee3-487e-ac92-e6d1cd85d6a1" autoIncrement="false" defaultValue="" name="pontuacao" nullable="0" physicalName="pontuacao" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL10" populated="true" UUID="c1279739-3e2f-48b7-8b34-ed25e52f6306" autoIncrement="false" defaultValue="" name="texto" nullable="0" physicalName="texto" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL11" populated="true" UUID="8bf71288-9c0a-421b-86f9-24fcfe70c589" autoIncrement="false" defaultValue="" name="titulo" nullable="0" physicalName="titulo" precision="150" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL12" populated="true" UUID="2005edbc-f2c4-4155-a2b1-34978890fe47" autoIncrement="false" defaultValue="" name="id_usuario" nullable="0" physicalName="id_usuario" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL13" populated="true" UUID="4e0b1145-f1ae-482d-b57b-4946877856f5" autoIncrement="false" defaultValue="" name="site_avaliacao" nullable="0" physicalName="site_avaliacao" precision="255" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB53" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB52" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB54" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX14" populated="true" UUID="08eae7a9-706a-4813-9718-abc6a83eb005" clustered="false" name="id_avaliacao" physicalName="id_avaliacao" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC15" populated="true" UUID="1b17bf23-f1b3-4a94-a7fb-571f92543bc8" ascendingOrDescending="UNSPECIFIED" column-ref="COL6" name="id_avaliacao" physicalName="id_avaliacao" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB16" populated="true" UUID="f1ebca98-1f26-474f-af73-ca7f0e88a79a" name="categoria" objectType="TABLE" physicalName="categoria" >
+      <remarks></remarks>
+      <folder id="FOLTAB161" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL17" populated="true" UUID="8be834a5-eecd-47c0-99f2-b0788d52b3d0" autoIncrement="true" defaultValue="nextval(&apos;categoria_id_categoria_seq&apos;::regclass)" name="id_categoria" nullable="0" physicalName="id_categoria" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL18" populated="true" UUID="9b8a5cbc-7120-4df7-9800-10313b3afd58" autoIncrement="false" defaultValue="" name="nome_categoria" nullable="0" physicalName="nome_categoria" precision="100" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB163" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB162" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB164" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX19" populated="true" UUID="015cb878-acdd-4cce-ba09-d48945e37555" clustered="false" name="id_categoria" physicalName="id_categoria" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC20" populated="true" UUID="ea02e903-c6a8-459d-9d68-db2a1ac94a2d" ascendingOrDescending="UNSPECIFIED" column-ref="COL17" name="id_categoria" physicalName="id_categoria" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB21" populated="true" UUID="0286515d-3dc8-488f-b1fb-fe91f2b68708" name="categorias_associada" objectType="TABLE" physicalName="categorias_associada" >
+      <remarks></remarks>
+      <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL22" populated="true" UUID="b1dec56b-1208-497b-82bd-e1a7bf276eb5" autoIncrement="true" defaultValue="nextval(&apos;categorias_associada_id_cat_associada_seq&apos;::regclass)" name="id_cat_associada" nullable="0" physicalName="id_cat_associada" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL23" populated="true" UUID="dfd10c11-ea48-4398-a9f7-0d26315a2578" autoIncrement="false" defaultValue="" name="id_categoria" nullable="0" physicalName="id_categoria" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL24" populated="true" UUID="a1c6e9c2-5187-4dad-8ce3-6ee114f83d0f" autoIncrement="false" defaultValue="" name="id_hotel" nullable="0" physicalName="id_hotel" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX25" populated="true" UUID="8805db57-82fb-4f32-8e53-2ac4977fd44a" clustered="false" name="id_categorias_associadas" physicalName="id_categorias_associadas" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC26" populated="true" UUID="f2d4ad88-6eff-4205-9eb9-734a3a549b3d" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="id_cat_associada" physicalName="id_cat_associada" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB27" populated="true" UUID="0606cbfd-f04b-4509-ade7-fbab360380ba" name="cidade" objectType="TABLE" physicalName="cidade" >
+      <remarks></remarks>
+      <folder id="FOLTAB271" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL28" populated="true" UUID="bb905d59-c72a-4f92-b3dc-dd7dc1a8b39d" autoIncrement="true" defaultValue="nextval(&apos;cidade_id_cidade_seq_1&apos;::regclass)" name="id_cidade" nullable="0" physicalName="id_cidade" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL29" populated="true" UUID="4620e7ef-b642-4c5b-8170-3d690df1ab33" autoIncrement="false" defaultValue="" name="nome_cidade" nullable="0" physicalName="nome_cidade" precision="100" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL30" populated="true" UUID="22e729e0-a189-4433-b199-90ab4e44b0d6" autoIncrement="false" defaultValue="" name="id_provincia" nullable="0" physicalName="id_provincia" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB273" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB274" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX31" populated="true" UUID="7ffe0d40-082f-4555-b13b-afa77a5453a7" clustered="false" name="cidade_id" physicalName="cidade_id" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC32" populated="true" UUID="b08cd253-eb3d-4a4c-a777-07c97c841c75" ascendingOrDescending="UNSPECIFIED" column-ref="COL28" name="id_cidade" physicalName="id_cidade" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB33" populated="true" UUID="aaaacbb8-193d-4f66-8a2e-68428c4b0548" name="hotel" objectType="TABLE" physicalName="hotel" >
+      <remarks></remarks>
+      <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL34" populated="true" UUID="c6e51440-e51b-442d-837c-0758fa4f5e0f" autoIncrement="true" defaultValue="nextval(&apos;hotel_id_hotel_seq&apos;::regclass)" name="id_hotel" nullable="0" physicalName="id_hotel" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL35" populated="true" UUID="8db3918a-2eb2-45ed-93f4-557b39be89d3" autoIncrement="false" defaultValue="" name="id_cidade" nullable="0" physicalName="id_cidade" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL36" populated="true" UUID="fd0844f2-37b4-4e4b-839e-4dd3ab6b3fad" autoIncrement="false" defaultValue="" name="cep" nullable="0" physicalName="cep" precision="20" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL37" populated="true" UUID="68f71e6e-a291-4934-a60d-a887595765ec" autoIncrement="false" defaultValue="" name="latitude" nullable="0" physicalName="latitude" precision="8" referenceCount="1" scale="8" sourceDataTypeName="float4" type="7" >
+        <remarks></remarks>
+       </column>
+       <column id="COL38" populated="true" UUID="1f98339a-3a75-4a81-aa20-3fdb827ea16b" autoIncrement="false" defaultValue="" name="longitude" nullable="0" physicalName="longitude" precision="8" referenceCount="1" scale="8" sourceDataTypeName="float4" type="7" >
+        <remarks></remarks>
+       </column>
+       <column id="COL39" populated="true" UUID="040d4a77-e515-423a-9ef2-d1ffbc3805c4" autoIncrement="false" defaultValue="" name="endereco" nullable="0" physicalName="endereco" precision="255" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL40" populated="true" UUID="f87c8eb7-676b-4404-b426-1223369fc303" autoIncrement="false" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="255" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL41" populated="true" UUID="6e4ad3ec-e516-46e2-9b39-e381b4378a94" autoIncrement="false" defaultValue="" name="site_hotel" nullable="0" physicalName="site_hotel" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL42" populated="true" UUID="7539b8a7-baa1-4b15-9313-3c99f1e301d6" autoIncrement="false" defaultValue="" name="valor_medio" nullable="0" physicalName="valor_medio" precision="8" referenceCount="1" scale="8" sourceDataTypeName="float4" type="7" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB333" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB332" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX43" populated="true" UUID="d0683fce-e8fb-41f6-a158-f59f7cab1f07" clustered="false" name="hotel_id_pk" physicalName="hotel_id_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC44" populated="true" UUID="421210e5-8f54-491f-a92e-b6d4babc7a32" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="id_hotel" physicalName="id_hotel" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB45" populated="true" UUID="86b0f902-052c-4acf-aa18-8416a0897e66" name="pais" objectType="TABLE" physicalName="pais" >
+      <remarks></remarks>
+      <folder id="FOLTAB451" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL46" populated="true" UUID="f851d6dc-0617-495b-a204-351587b90439" autoIncrement="true" defaultValue="nextval(&apos;pais_id_pais_seq_1&apos;::regclass)" name="id_pais" nullable="0" physicalName="id_pais" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL47" populated="true" UUID="18ae21fa-083b-4d81-b082-429ef5334823" autoIncrement="false" defaultValue="" name="nome_pais" nullable="0" physicalName="nome_pais" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB453" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB452" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB454" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX48" populated="true" UUID="20039d19-95c2-4d8d-a87a-d78ac703c58f" clustered="false" name="id_pais" physicalName="id_pais" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC49" populated="true" UUID="5bab790c-66b3-4c58-a378-246bc9c5f91c" ascendingOrDescending="UNSPECIFIED" column-ref="COL46" name="id_pais" physicalName="id_pais" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB50" populated="true" UUID="43fcafc9-2a5e-4bd9-9692-3130428623cc" name="provincia" objectType="TABLE" physicalName="provincia" >
+      <remarks></remarks>
+      <folder id="FOLTAB501" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL51" populated="true" UUID="30533438-2a35-472b-8936-fa730eaeef83" autoIncrement="true" defaultValue="nextval(&apos;provincia_id_provincia_seq_1&apos;::regclass)" name="id_provincia" nullable="0" physicalName="id_provincia" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL52" populated="true" UUID="de43c409-0bd1-4dab-8644-328e9bbd7eac" autoIncrement="false" defaultValue="" name="nome_provincia" nullable="0" physicalName="nome_provincia" precision="100" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL53" populated="true" UUID="818c195b-3954-49cb-9bcf-a15b383ff3cb" autoIncrement="false" defaultValue="" name="id_pais" nullable="0" physicalName="id_pais" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB503" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB502" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB504" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX54" populated="true" UUID="5e719e1e-0159-4427-9db9-59c6c38bf596" clustered="false" name="id_provincia" physicalName="id_provincia" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC55" populated="true" UUID="b7886fa5-2a70-4458-a34c-9d90a92f7dae" ascendingOrDescending="UNSPECIFIED" column-ref="COL51" name="id_provincia" physicalName="id_provincia" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB56" populated="true" UUID="9fedf19b-0cb7-4dc4-8892-2abc4bedf618" name="usuario" objectType="TABLE" physicalName="usuario" >
+      <remarks></remarks>
+      <folder id="FOLTAB561" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL57" populated="true" UUID="f75cc7f4-675f-4a13-8ea2-26559291cf43" autoIncrement="true" defaultValue="nextval(&apos;usuario_id_usuario_seq_1&apos;::regclass)" name="id_usuario" nullable="0" physicalName="id_usuario" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL58" populated="true" UUID="28a145d4-d9f5-469f-80f5-b2d8525528a1" autoIncrement="false" defaultValue="" name="nome_usuario" nullable="0" physicalName="nome_usuario" precision="50" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL59" populated="true" UUID="387af874-ab3a-4916-aee3-b3cfca4d08c5" autoIncrement="false" defaultValue="" name="id_cidade" nullable="1" physicalName="id_cidade" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB563" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB562" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB564" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX60" populated="true" UUID="11af2385-1510-4da9-9eef-79d9251335d3" clustered="false" name="id_usuario" physicalName="id_usuario" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC61" populated="true" UUID="2c798154-380a-4793-979c-23a9fa778cc5" ascendingOrDescending="UNSPECIFIED" column-ref="COL57" name="id_usuario" physicalName="id_usuario" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB62" populated="true" UUID="a2b9f384-8d83-41ec-8e0b-2efad98793ba" name="visualizacao" objectType="TABLE" physicalName="visualizacao" >
+      <remarks></remarks>
+      <folder id="FOLTAB621" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL63" populated="true" UUID="6ad34480-cf70-45f4-8829-ba0bc84bd2bf" autoIncrement="true" defaultValue="nextval(&apos;visualizacao_id_visualizacao_seq&apos;::regclass)" name="id_visualizacao" nullable="0" physicalName="id_visualizacao" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="serial" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL64" populated="true" UUID="74423e5b-5a9d-452a-ad11-2b9b762e1aa9" autoIncrement="false" defaultValue="" name="data_visualizacao" nullable="0" physicalName="data_visualizacao" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL65" populated="true" UUID="48c23e11-b478-4638-a2ac-69076a611856" autoIncrement="false" defaultValue="" name="id_avaliacao" nullable="0" physicalName="id_avaliacao" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB623" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB622" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB624" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX66" populated="true" UUID="03f39eab-d6cc-4d1e-be32-e953bf94d788" clustered="false" name="id_visualizacao" physicalName="id_visualizacao" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC67" populated="true" UUID="82436c1a-46fd-4c74-bfdc-9ac0fadab812" ascendingOrDescending="UNSPECIFIED" column-ref="COL63" name="id_visualizacao" physicalName="id_visualizacao" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <relationships>
+    <relationship id="REL68" populated="true" UUID="50742277-4165-4e26-a95d-10fad9487ba4" deferrability="7" deleteRule="3" fk-table-ref="TAB62" fkCardinality="7" identifying="false" name="avaliacao_visualizacao_fk" physicalName="avaliacao_visualizacao_fk" pk-table-ref="TAB5" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP69" populated="true" UUID="558e79d6-272c-4408-8194-30302f77a959" fk-column-ref="COL65" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL6" />
+    </relationship>
+    <relationship id="REL70" populated="true" UUID="dc4a9b58-df4d-4680-b6f3-b722d0c79d62" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="categoria_categorias_associada_fk" physicalName="categoria_categorias_associada_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP71" populated="true" UUID="5a6f9d8c-a155-4dc1-af41-ccf5a14f4c20" fk-column-ref="COL23" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
+    </relationship>
+    <relationship id="REL72" populated="true" UUID="5065aa08-0569-4d87-a855-6fad113a5359" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="false" name="cidade_hotel_fk" physicalName="cidade_hotel_fk" pk-table-ref="TAB27" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP73" populated="true" UUID="f3d1d964-2666-4290-b529-b3798081a71a" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+    </relationship>
+    <relationship id="REL74" populated="true" UUID="c4fbca38-5042-4fea-a542-e95c348f799a" deferrability="7" deleteRule="3" fk-table-ref="TAB56" fkCardinality="7" identifying="false" name="cidade_usuario_fk" physicalName="cidade_usuario_fk" pk-table-ref="TAB27" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP75" populated="true" UUID="2e4e9bb1-c855-4e02-b7e6-16951e7158cd" fk-column-ref="COL59" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+    </relationship>
+    <relationship id="REL76" populated="true" UUID="1b3d423c-5b9d-4ab3-b22e-ece7ce8102c2" deferrability="7" deleteRule="3" fk-table-ref="TAB5" fkCardinality="7" identifying="false" name="hotel_avaliacao_fk" physicalName="hotel_avaliacao_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP77" populated="true" UUID="ca96dd68-2e2c-4374-ac0e-a6deeaf33190" fk-column-ref="COL7" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+    </relationship>
+    <relationship id="REL78" populated="true" UUID="f4b5edc3-57a1-435c-b84d-54be9415f532" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="hotel_categorias_associada_fk" physicalName="hotel_categorias_associada_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP79" populated="true" UUID="eb9b695c-6e5d-4b8a-aed3-b0ddc94010dd" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+    </relationship>
+    <relationship id="REL80" populated="true" UUID="8754c63b-cf17-4e3d-84fd-9f4bcb5610ad" deferrability="7" deleteRule="3" fk-table-ref="TAB50" fkCardinality="7" identifying="false" name="pais_provincia_fk" physicalName="pais_provincia_fk" pk-table-ref="TAB45" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP81" populated="true" UUID="6f1b51f9-dfbd-4ae1-8a01-f9d69437bad2" fk-column-ref="COL53" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL46" />
+    </relationship>
+    <relationship id="REL82" populated="true" UUID="f8730337-44e5-4a9c-a59b-d7b65ccd0728" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="false" name="provincia_cidade_fk" physicalName="provincia_cidade_fk" pk-table-ref="TAB50" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP83" populated="true" UUID="aecb7fc6-4984-4ef6-9dbb-4e65eeb5255e" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL51" />
+    </relationship>
+    <relationship id="REL84" populated="true" UUID="64d55d3d-9e03-4803-864f-cfcb6169481c" deferrability="7" deleteRule="3" fk-table-ref="TAB5" fkCardinality="7" identifying="false" name="usuario_avaliacao_fk" physicalName="usuario_avaliacao_fk" pk-table-ref="TAB56" pkCardinality="2" updateRule="3" >
+     <column-mapping id="CMP85" populated="true" UUID="12af70b0-fc1b-4246-a779-f56b7d61b424" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL57" />
+    </relationship>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB87" populated="true" UUID="91931c75-002a-419f-8205-399b3938e12a" name="avaliacao" objectType="TABLE" physicalName="avaliacao" >
+   <remarks></remarks>
+   <folder id="FOLTAB871" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL88" populated="true" UUID="f975d579-1eac-4a27-997f-64bc7cfaadb7" autoIncrement="true" defaultValue="nextval(&apos;avaliacao_id_avaliacao_seq&apos;::regclass)" name="id_avaliacao" nullable="0" physicalName="id_avaliacao" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL6" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL89" populated="true" UUID="5c14ae5a-3d28-4772-94d3-7bbde94a7212" autoIncrement="false" defaultValue="" name="id_hotel" nullable="0" physicalName="id_hotel" precision="0" referenceCount="2" scale="0" source-column-ref="COL7" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL90" populated="true" UUID="0f94187e-a86c-41a4-af6e-44ce9789bda6" autoIncrement="false" defaultValue="" name="data" nullable="0" physicalName="data" precision="0" referenceCount="1" scale="0" source-column-ref="COL8" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL91" populated="true" UUID="4b912d51-e435-45e5-ae89-e26c6a31c792" autoIncrement="false" defaultValue="" name="pontuacao" nullable="0" physicalName="pontuacao" precision="0" referenceCount="1" scale="0" source-column-ref="COL9" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL92" populated="true" UUID="cfb92920-bac4-4233-947a-751d65aeee90" autoIncrement="false" defaultValue="" name="texto" nullable="0" physicalName="texto" precision="0" referenceCount="1" scale="0" source-column-ref="COL10" sourceDataTypeName="text" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
+     <remarks></remarks>
+    </column>
+    <column id="COL93" populated="true" UUID="d05a99d8-7bb2-47ec-9eb9-4ed4ef7ff0ee" autoIncrement="false" defaultValue="" name="titulo" nullable="0" physicalName="titulo" precision="150" referenceCount="1" scale="0" source-column-ref="COL11" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL94" populated="true" UUID="359d8f84-3f3a-4949-901d-fa78c4081df8" autoIncrement="false" defaultValue="" name="id_usuario" nullable="0" physicalName="id_usuario" precision="0" referenceCount="2" scale="0" source-column-ref="COL12" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL95" populated="true" UUID="4bc4694d-5b95-4833-88e1-bc18247c51c1" autoIncrement="false" defaultValue="" name="site_avaliacao" nullable="0" physicalName="site_avaliacao" precision="255" referenceCount="1" scale="0" source-column-ref="COL13" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB873" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB872" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB874" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX96" populated="true" UUID="c0d4b096-b07b-48ee-96d9-edfa98f2a1d2" clustered="false" name="id_avaliacao" physicalName="id_avaliacao" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC97" populated="true" UUID="7229968e-01c4-461e-800a-f0f0e6482dd7" ascendingOrDescending="UNSPECIFIED" column-ref="COL88" name="id_avaliacao" physicalName="id_avaliacao" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB98" populated="true" UUID="a54d1a0e-2b38-4d89-b74b-04de2a4e94be" name="categoria" objectType="TABLE" physicalName="categoria" >
+   <remarks></remarks>
+   <folder id="FOLTAB981" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL99" populated="true" UUID="8c6034d2-a9a0-4aa1-9b72-2c0e99a5d14f" autoIncrement="true" defaultValue="nextval(&apos;categoria_id_categoria_seq&apos;::regclass)" name="id_categoria" nullable="0" physicalName="id_categoria" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL100" populated="true" UUID="824607db-adee-4db9-9285-2deece53cb17" autoIncrement="false" defaultValue="" name="nome_categoria" nullable="0" physicalName="nome_categoria" precision="100" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB983" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB982" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB984" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX101" populated="true" UUID="03625e56-5b08-465f-9317-b4bb8fcd05fb" clustered="false" name="id_categoria" physicalName="id_categoria" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC102" populated="true" UUID="75d47b64-17df-4395-9e9f-869f34780e8e" ascendingOrDescending="UNSPECIFIED" column-ref="COL99" name="id_categoria" physicalName="id_categoria" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB103" populated="true" UUID="3996da38-6965-4581-9db6-540183436dff" name="categorias_associada" objectType="TABLE" physicalName="categorias_associada" >
+   <remarks></remarks>
+   <folder id="FOLTAB1031" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL104" populated="true" UUID="b3d09ddb-6545-4770-8a3a-740d49f36e53" autoIncrement="false" defaultValue="" name="id_categoria" nullable="0" physicalName="id_categoria" precision="0" referenceCount="2" scale="0" source-column-ref="COL23" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL105" populated="true" UUID="3540b695-7fe2-4566-bad5-72ea031097c7" autoIncrement="false" defaultValue="" name="id_hotel" nullable="0" physicalName="id_hotel" precision="0" referenceCount="2" scale="0" source-column-ref="COL24" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1033" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1032" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1034" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX106" populated="true" UUID="ee275ce7-b931-45c7-8e9c-8dacfb73d2cd" clustered="false" name="id_categorias_associadas" physicalName="id_categorias_associadas" primaryKeyIndex="true" unique="true" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB107" populated="true" UUID="87e1f4d4-d844-43a6-ad1e-978a46bfe361" name="cidade" objectType="TABLE" physicalName="cidade" >
+   <remarks></remarks>
+   <folder id="FOLTAB1071" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL108" populated="true" UUID="c2d60db9-d93a-49e9-9acd-eead9f849325" autoIncrement="true" defaultValue="nextval(&apos;cidade_id_cidade_seq_1&apos;::regclass)" name="id_cidade" nullable="0" physicalName="id_cidade" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL28" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL109" populated="true" UUID="b99d77f4-dfaa-40ad-b384-225d0f14ad92" autoIncrement="false" defaultValue="" name="nome_cidade" nullable="0" physicalName="nome_cidade" precision="100" referenceCount="1" scale="0" source-column-ref="COL29" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL110" populated="true" UUID="1dfd245d-7203-4da6-8d70-151a99813357" autoIncrement="false" defaultValue="" name="id_provincia" nullable="0" physicalName="id_provincia" precision="0" referenceCount="2" scale="0" source-column-ref="COL30" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1073" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1072" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1074" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX111" populated="true" UUID="9178193d-051f-4957-81bc-fa24ed215d1e" clustered="false" name="cidade_id" physicalName="cidade_id" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC112" populated="true" UUID="9850ff25-0065-4f17-949a-f96f3d45347b" ascendingOrDescending="UNSPECIFIED" column-ref="COL108" name="id_cidade" physicalName="id_cidade" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB113" populated="true" UUID="dc620958-a70f-4f2a-85a6-6f4e6b32646b" name="hotel" objectType="TABLE" physicalName="hotel" >
+   <remarks></remarks>
+   <folder id="FOLTAB1131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL114" populated="true" UUID="cc581a92-2845-4602-8277-862a038bb9d0" autoIncrement="true" defaultValue="nextval(&apos;hotel_id_hotel_seq&apos;::regclass)" name="id_hotel" nullable="0" physicalName="id_hotel" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL34" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL115" populated="true" UUID="3139fe46-29c0-44d5-b3ed-f24a95252dbf" autoIncrement="false" defaultValue="" name="id_cidade" nullable="0" physicalName="id_cidade" precision="0" referenceCount="2" scale="0" source-column-ref="COL35" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL116" populated="true" UUID="720d328d-9ed3-41c1-a90e-2b7eff6f3dbf" autoIncrement="false" defaultValue="" name="cep" nullable="0" physicalName="cep" precision="20" referenceCount="1" scale="0" source-column-ref="COL36" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL117" populated="true" UUID="b9e7edee-fe87-40d5-92c8-657427058c0f" autoIncrement="false" defaultValue="" name="latitude" nullable="0" physicalName="latitude" precision="0" referenceCount="1" scale="0" source-column-ref="COL37" sourceDataTypeName="float4" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
+     <remarks></remarks>
+    </column>
+    <column id="COL118" populated="true" UUID="29f4b1ae-05a7-47c6-bbde-1dc6a4dbee00" autoIncrement="false" defaultValue="" name="longitude" nullable="0" physicalName="longitude" precision="0" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="float4" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
+     <remarks></remarks>
+    </column>
+    <column id="COL119" populated="true" UUID="2e513e6a-9edf-4d0d-b1ae-93c4ce2d82dc" autoIncrement="false" defaultValue="" name="endereco" nullable="0" physicalName="endereco" precision="255" referenceCount="1" scale="0" source-column-ref="COL39" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL120" populated="true" UUID="e8251b7c-31cc-454b-93b9-2c579b0d7998" autoIncrement="false" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="255" referenceCount="1" scale="0" source-column-ref="COL40" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL121" populated="true" UUID="42a609c9-f0f5-4a6a-9f36-e3d90453014c" autoIncrement="false" defaultValue="" name="site_hotel" nullable="0" physicalName="site_hotel" precision="0" referenceCount="1" scale="0" source-column-ref="COL41" sourceDataTypeName="text" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
+     <remarks></remarks>
+    </column>
+    <column id="COL122" populated="true" UUID="bbc52eba-19b9-4808-a692-b439ee2b3f38" autoIncrement="false" defaultValue="" name="valor_medio" nullable="0" physicalName="valor_medio" precision="0" referenceCount="1" scale="0" source-column-ref="COL42" sourceDataTypeName="float4" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX123" populated="true" UUID="e84ab109-d80c-4995-b48c-94882c13a46c" clustered="false" name="hotel_id_pk" physicalName="hotel_id_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC124" populated="true" UUID="264e603f-00fe-446d-bcfa-0fd10283d772" ascendingOrDescending="UNSPECIFIED" column-ref="COL114" name="id_hotel" physicalName="id_hotel" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB125" populated="true" UUID="d3af4b46-57e8-4539-8546-47638c01f26c" name="pais" objectType="TABLE" physicalName="pais" >
+   <remarks></remarks>
+   <folder id="FOLTAB1251" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL126" populated="true" UUID="9ac2fbb6-b251-4606-b1c3-a64a0a17f644" autoIncrement="true" defaultValue="nextval(&apos;pais_id_pais_seq_1&apos;::regclass)" name="id_pais" nullable="0" physicalName="id_pais" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL46" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL127" populated="true" UUID="53b923c4-74c8-44b5-8ea1-53c003f108f1" autoIncrement="false" defaultValue="" name="nome_pais" nullable="0" physicalName="nome_pais" precision="50" referenceCount="1" scale="0" source-column-ref="COL47" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1253" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1252" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1254" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX128" populated="true" UUID="fead3a82-89ea-43ff-ad99-04169d24225f" clustered="false" name="id_pais" physicalName="id_pais" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC129" populated="true" UUID="70033dc2-e7c5-4722-8e4e-72349ad5d688" ascendingOrDescending="UNSPECIFIED" column-ref="COL126" name="id_pais" physicalName="id_pais" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB130" populated="true" UUID="77b87539-265e-4520-b26d-38ad483ea843" name="provincia" objectType="TABLE" physicalName="provincia" >
+   <remarks></remarks>
+   <folder id="FOLTAB1301" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL131" populated="true" UUID="52326797-90ff-4f73-ab95-405e3a93ae30" autoIncrement="true" defaultValue="nextval(&apos;provincia_id_provincia_seq_1&apos;::regclass)" name="id_provincia" nullable="0" physicalName="id_provincia" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL51" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL132" populated="true" UUID="cb4d74ff-b9d1-4f78-ba24-8d57d0b9d6a7" autoIncrement="false" defaultValue="" name="nome_provincia" nullable="0" physicalName="nome_provincia" precision="100" referenceCount="1" scale="0" source-column-ref="COL52" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL133" populated="true" UUID="827a73d2-e825-49e8-920a-d6df0892be2c" autoIncrement="false" defaultValue="" name="id_pais" nullable="0" physicalName="id_pais" precision="0" referenceCount="2" scale="0" source-column-ref="COL53" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1303" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1302" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1304" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX134" populated="true" UUID="20c273cf-1128-41d2-8168-0ccde282b831" clustered="false" name="id_provincia" physicalName="id_provincia" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC135" populated="true" UUID="5403afb1-ef19-41b5-8d9c-d7589a8f296f" ascendingOrDescending="UNSPECIFIED" column-ref="COL131" name="id_provincia" physicalName="id_provincia" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB136" populated="true" UUID="bb6a271e-114a-4231-a98e-52a88b81073c" name="usuario" objectType="TABLE" physicalName="usuario" >
+   <remarks></remarks>
+   <folder id="FOLTAB1361" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL137" populated="true" UUID="52871a0f-0d54-4fc6-b2f4-0d43280ce6da" autoIncrement="true" defaultValue="nextval(&apos;usuario_id_usuario_seq_1&apos;::regclass)" name="id_usuario" nullable="0" physicalName="id_usuario" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL57" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL138" populated="true" UUID="21abf1ad-d183-4089-8a53-02296e16367b" autoIncrement="false" defaultValue="" name="nome_usuario" nullable="0" physicalName="nome_usuario" precision="50" referenceCount="1" scale="0" source-column-ref="COL58" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL139" populated="true" UUID="3545e165-8fbc-4e24-94df-7317f6e38ac8" autoIncrement="false" defaultValue="" name="id_cidade" nullable="1" physicalName="id_cidade" precision="0" referenceCount="2" scale="0" source-column-ref="COL59" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1363" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1362" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1364" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX140" populated="true" UUID="133099a8-6d1b-423f-977e-8463f2c92e42" clustered="false" name="id_usuario" physicalName="id_usuario" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC141" populated="true" UUID="6ee51a61-d0e2-45f0-816b-5616666a0afd" ascendingOrDescending="UNSPECIFIED" column-ref="COL137" name="id_usuario" physicalName="id_usuario" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB142" populated="true" UUID="3a8c92ad-f4ca-406c-8707-b1dc844eb673" name="visualizacao" objectType="TABLE" physicalName="visualizacao" >
+   <remarks></remarks>
+   <folder id="FOLTAB1421" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL143" populated="true" UUID="36da7149-b9b8-4c0f-a452-da21992af685" autoIncrement="true" defaultValue="nextval(&apos;visualizacao_id_visualizacao_seq&apos;::regclass)" name="id_visualizacao" nullable="0" physicalName="id_visualizacao" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL63" sourceDataTypeName="serial" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL144" populated="true" UUID="93fd26e9-e729-4922-9bfc-4b159b06b71a" autoIncrement="false" defaultValue="" name="data_visualizacao" nullable="0" physicalName="data_visualizacao" precision="0" referenceCount="1" scale="0" source-column-ref="COL64" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL145" populated="true" UUID="a58ff6ce-ab14-41f5-8adc-940fb92fe885" autoIncrement="false" defaultValue="" name="id_avaliacao" nullable="0" physicalName="id_avaliacao" precision="0" referenceCount="2" scale="0" source-column-ref="COL65" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1423" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1422" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1424" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX146" populated="true" UUID="1ab573e1-115b-446c-9593-dda1f080d3ee" clustered="false" name="id_visualizacao" physicalName="id_visualizacao" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC147" populated="true" UUID="dabd02b1-22f9-4839-9987-b148eb2f7c18" ascendingOrDescending="UNSPECIFIED" column-ref="COL143" name="id_visualizacao" physicalName="id_visualizacao" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL148" populated="true" UUID="64999253-9b53-450e-8ed1-3042b48614ee" deferrability="7" deleteRule="3" fk-table-ref="TAB142" fkCardinality="7" identifying="false" name="avaliacao_visualizacao_fk" physicalName="avaliacao_visualizacao_fk" pk-table-ref="TAB87" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP149" populated="true" UUID="6d4926e2-7c57-43e7-a684-901327926736" fk-column-ref="COL145" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL88" />
+   </relationship>
+   <relationship id="REL150" populated="true" UUID="c0e4c306-e871-4fa1-b5ce-43c9f2ef1d9b" deferrability="7" deleteRule="3" fk-table-ref="TAB103" fkCardinality="7" identifying="false" name="categoria_categorias_associada_fk" physicalName="categoria_categorias_associada_fk" pk-table-ref="TAB98" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP151" populated="true" UUID="f18bebcc-7e5d-4fdc-8c26-551c682655ac" fk-column-ref="COL104" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL99" />
+   </relationship>
+   <relationship id="REL152" populated="true" UUID="8493a9ab-4b27-4669-b69b-5503fac3d6db" deferrability="7" deleteRule="3" fk-table-ref="TAB113" fkCardinality="7" identifying="false" name="cidade_hotel_fk" physicalName="cidade_hotel_fk" pk-table-ref="TAB107" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP153" populated="true" UUID="d7014280-2ff7-49db-83b9-d95a8c804471" fk-column-ref="COL115" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL108" />
+   </relationship>
+   <relationship id="REL154" populated="true" UUID="a01462e2-1f7c-446a-9fe5-ac141aeef75c" deferrability="7" deleteRule="3" fk-table-ref="TAB136" fkCardinality="7" identifying="false" name="cidade_usuario_fk" physicalName="cidade_usuario_fk" pk-table-ref="TAB107" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP155" populated="true" UUID="6e9c2028-77fa-48ca-8f4d-cb47878536c3" fk-column-ref="COL139" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL108" />
+   </relationship>
+   <relationship id="REL156" populated="true" UUID="b5c76ae1-c774-4324-a8ff-45076d0978cb" deferrability="7" deleteRule="3" fk-table-ref="TAB87" fkCardinality="7" identifying="false" name="hotel_avaliacao_fk" physicalName="hotel_avaliacao_fk" pk-table-ref="TAB113" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP157" populated="true" UUID="70769d94-dd72-43cd-98a7-a15fa5c12eb3" fk-column-ref="COL89" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL114" />
+   </relationship>
+   <relationship id="REL158" populated="true" UUID="7c99089a-26c2-49de-bc7f-1e5cbc29c5b4" deferrability="7" deleteRule="3" fk-table-ref="TAB103" fkCardinality="7" identifying="false" name="hotel_categorias_associada_fk" physicalName="hotel_categorias_associada_fk" pk-table-ref="TAB113" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP159" populated="true" UUID="49c135ca-7ec1-4645-9114-24d213f8c2a8" fk-column-ref="COL105" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL114" />
+   </relationship>
+   <relationship id="REL160" populated="true" UUID="018786f1-9092-40bb-af87-c4dcfec4a963" deferrability="7" deleteRule="3" fk-table-ref="TAB130" fkCardinality="7" identifying="false" name="pais_provincia_fk" physicalName="pais_provincia_fk" pk-table-ref="TAB125" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP161" populated="true" UUID="8a3cf58e-caba-4f64-9b6b-05a582534d73" fk-column-ref="COL133" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL126" />
+   </relationship>
+   <relationship id="REL162" populated="true" UUID="a6a7f14d-c0b3-4dfe-b8d2-bf8209224d99" deferrability="7" deleteRule="3" fk-table-ref="TAB107" fkCardinality="7" identifying="false" name="provincia_cidade_fk" physicalName="provincia_cidade_fk" pk-table-ref="TAB130" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP163" populated="true" UUID="00bada98-e6ca-41e6-8eb3-650c5d2c4e6d" fk-column-ref="COL110" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL131" />
+   </relationship>
+   <relationship id="REL164" populated="true" UUID="e23c19eb-edef-4f2d-9fd8-c3e6e5b65db2" deferrability="7" deleteRule="3" fk-table-ref="TAB87" fkCardinality="7" identifying="false" name="usuario_avaliacao_fk" physicalName="usuario_avaliacao_fk" pk-table-ref="TAB136" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP165" populated="true" UUID="47eea13e-8cce-4226-9e71-9c19ce758910" fk-column-ref="COL94" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL137" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537141" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB87" x="531" y="283" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB98" x="214" y="633" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB103" x="231" y="487" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB107" x="682" y="185" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB113" x="115" y="190" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB125" x="281" y="88" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB130" x="596" y="38" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB136" x="881" y="349" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB142" x="625" y="518" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL150" pkConnection="0.5434782608695652" fkConnection="0.4403292181069959" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL156" pkConnection="0.7548387096774194" fkConnection="0.1773049645390071" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL158" pkConnection="0.9509803921568627" fkConnection="0.32098765432098764" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL152" pkConnection="0.30985915492957744" fkConnection="0.5741935483870968" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL162" pkConnection="0.6710526315789473" fkConnection="0.31336405529953915" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL160" pkConnection="0.17543859649122806" fkConnection="0.8591549295774648" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL164" pkConnection="0.28169014084507044" fkConnection="0.6099290780141844" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL154" pkConnection="0.9539170506912442" fkConnection="0.04672897196261682" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL148" pkConnection="0.8054298642533937" fkConnection="0.351931330472103" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  <table-profile-result ref-id="TAB56" createStartTime="1633397532453" createEndTime="1633397533572" exception="false" rowCount="9739" UUID="c44aa83d-bc01-4d13-b9d1-5fad7e65728e">
+   <column-profile-result ref-id="COL57" createStartTime="1633397533112" createEndTime="1633397533216" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="9739" UUID="7e5d1a51-2bae-4fb5-ab9a-3bda30fb620c">
+    <avgValue type="java.lang.String" value="4870.0000000000000000"/>
+    <maxValue type="java.lang.String" value="9739"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="6114" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4790" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="273" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="3936" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5761" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5468" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="7662" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4326" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2520" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="9038" percent="1.0267994660642776E-4" otherValues="false"/>
+    <topNvalue count="9729" type="java.lang.String" value="Other Values" percent="0.9989732005339357" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL58" createStartTime="1633397533216" createEndTime="1633397533537" exception="false" avgLength="9.169421911900606" minLength="3" maxLength="20" nullCount="0" distinctValueCount="9222" UUID="a4255be3-3f42-441f-ada1-8852eb882b61">
+    <maxValue type="java.lang.String" value="zzzbill"/>
+    <minValue type="java.lang.String" value="#1Cubsfan"/>
+    <topNvalue count="7" type="java.lang.String" value="Michael M" percent="7.187596262449944E-4" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="David W" percent="7.187596262449944E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Michael B" percent="6.160796796385666E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="John C" percent="6.160796796385666E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="John M" percent="6.160796796385666E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Laura M" percent="5.133997330321388E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Linda C" percent="5.133997330321388E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Lauren S" percent="5.133997330321388E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="David M" percent="5.133997330321388E-4" otherValues="false"/>
+    <topNvalue count="4" type="java.lang.String" value="Linda H" percent="4.1071978642571105E-4" otherValues="false"/>
+    <topNvalue count="9683" type="java.lang.String" value="Other Values" percent="0.99424992299004" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL59" createStartTime="1633397533537" createEndTime="1633397533572" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="2363" distinctValueCount="2635" UUID="b08c598b-d4a9-4930-9c00-7e539495f9ca">
+    <avgValue type="java.lang.String" value="1406.7250542299349241"/>
+    <maxValue type="java.lang.String" value="3076"/>
+    <minValue type="java.lang.String" value="2"/>
+    <topNvalue count="2363" type="" value="null" percent="0.2426327138309888" otherValues="false"/>
+    <topNvalue count="166" type="java.lang.String" value="1931" percent="0.017044871136667007" otherValues="false"/>
+    <topNvalue count="143" type="java.lang.String" value="175" percent="0.01468323236471917" otherValues="false"/>
+    <topNvalue count="126" type="java.lang.String" value="977" percent="0.012937673272409899" otherValues="false"/>
+    <topNvalue count="121" type="java.lang.String" value="2557" percent="0.012424273539377759" otherValues="false"/>
+    <topNvalue count="119" type="java.lang.String" value="826" percent="0.012218913646164904" otherValues="false"/>
+    <topNvalue count="105" type="java.lang.String" value="172" percent="0.010781394393674915" otherValues="false"/>
+    <topNvalue count="101" type="java.lang.String" value="2572" percent="0.010370674607249204" otherValues="false"/>
+    <topNvalue count="89" type="java.lang.String" value="2853" percent="0.009138515247972072" otherValues="false"/>
+    <topNvalue count="81" type="java.lang.String" value="70" percent="0.008317075675120649" otherValues="false"/>
+    <topNvalue count="6325" type="java.lang.String" value="Other Values" percent="0.6494506622856556" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB21" createStartTime="1633397533578" createEndTime="1633397533885" exception="false" rowCount="7022" UUID="cadd2575-5d16-4ca6-b841-49b359768c96">
+   <column-profile-result ref-id="COL22" createStartTime="1633397533791" createEndTime="1633397533835" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="7022" UUID="e6bbd4a2-98fd-43da-9492-19065eae1065">
+    <avgValue type="java.lang.String" value="3511.5000000000000000"/>
+    <maxValue type="java.lang.String" value="7022"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="6114" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1489" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4790" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="273" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="6977" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="3936" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2574" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="951" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5761" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5843" percent="1.4240956992309884E-4" otherValues="false"/>
+    <topNvalue count="7012" type="java.lang.String" value="Other Values" percent="0.998575904300769" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL23" createStartTime="1633397533835" createEndTime="1633397533854" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="235" UUID="48a61128-abdd-44a4-a6c6-6e66c0ad91d1">
+    <avgValue type="java.lang.String" value="103.5479920250640843"/>
+    <maxValue type="java.lang.String" value="235"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1418" type="java.lang.String" value="141" percent="0.20193677015095415" otherValues="false"/>
+    <topNvalue count="838" type="java.lang.String" value="84" percent="0.11933921959555682" otherValues="false"/>
+    <topNvalue count="779" type="java.lang.String" value="80" percent="0.11093705497009398" otherValues="false"/>
+    <topNvalue count="699" type="java.lang.String" value="81" percent="0.09954428937624608" otherValues="false"/>
+    <topNvalue count="661" type="java.lang.String" value="69" percent="0.09413272571916832" otherValues="false"/>
+    <topNvalue count="398" type="java.lang.String" value="52" percent="0.056679008829393335" otherValues="false"/>
+    <topNvalue count="262" type="java.lang.String" value="128" percent="0.0373113073198519" otherValues="false"/>
+    <topNvalue count="184" type="java.lang.String" value="171" percent="0.026203360865850185" otherValues="false"/>
+    <topNvalue count="166" type="java.lang.String" value="202" percent="0.023639988607234406" otherValues="false"/>
+    <topNvalue count="164" type="java.lang.String" value="83" percent="0.02335516946738821" otherValues="false"/>
+    <topNvalue count="1453" type="java.lang.String" value="Other Values" percent="0.20692110509826261" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL24" createStartTime="1633397533855" createEndTime="1633397533885" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1433" UUID="ca7410ae-416a-48ae-b0b8-f9fa5035fec8">
+    <avgValue type="java.lang.String" value="701.0636570777556252"/>
+    <maxValue type="java.lang.String" value="1433"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="21" type="java.lang.String" value="282" percent="0.0029906009683850756" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="1360" percent="0.0029906009683850756" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="212" percent="0.0027057818285388777" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="1282" percent="0.0027057818285388777" otherValues="false"/>
+    <topNvalue count="18" type="java.lang.String" value="569" percent="0.002563372258615779" otherValues="false"/>
+    <topNvalue count="18" type="java.lang.String" value="372" percent="0.002563372258615779" otherValues="false"/>
+    <topNvalue count="17" type="java.lang.String" value="90" percent="0.00242096268869268" otherValues="false"/>
+    <topNvalue count="17" type="java.lang.String" value="176" percent="0.00242096268869268" otherValues="false"/>
+    <topNvalue count="16" type="java.lang.String" value="1072" percent="0.0022785531187695814" otherValues="false"/>
+    <topNvalue count="16" type="java.lang.String" value="806" percent="0.0022785531187695814" otherValues="false"/>
+    <topNvalue count="6840" type="java.lang.String" value="Other Values" percent="0.9740814582739961" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB27" createStartTime="1633397533886" createEndTime="1633397534227" exception="false" rowCount="3076" UUID="8034df0d-29df-4ceb-bc6c-cfef8665745e">
+   <column-profile-result ref-id="COL28" createStartTime="1633397534001" createEndTime="1633397534039" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="3076" UUID="6652c029-b2ff-4744-ab3c-9eb5e0297292">
+    <avgValue type="java.lang.String" value="1538.5000000000000000"/>
+    <maxValue type="java.lang.String" value="3076"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="790" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2850" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1798" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1489" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2335" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1269" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="652" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="273" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1560" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="51" percent="3.2509752925877764E-4" otherValues="false"/>
+    <topNvalue count="3066" type="java.lang.String" value="Other Values" percent="0.9967490247074122" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL29" createStartTime="1633397534039" createEndTime="1633397534216" exception="false" avgLength="9.057867360208062" minLength="3" maxLength="28" nullCount="0" distinctValueCount="2643" UUID="4063f787-fdf5-495c-8654-d21d81b4eb83">
+    <maxValue type="java.lang.String" value="Zionsville"/>
+    <minValue type="java.lang.String" value="Aberdeen"/>
+    <topNvalue count="7" type="java.lang.String" value="Franklin" percent="0.0022756827048114434" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Monroe" percent="0.0019505851755526658" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Lincoln" percent="0.0019505851755526658" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Arlington" percent="0.0019505851755526658" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Madison" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Columbus" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Troy" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Greenville" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Mount Pleasant" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Middletown" percent="0.001625487646293888" otherValues="false"/>
+    <topNvalue count="3021" type="java.lang.String" value="Other Values" percent="0.9821196358907672" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL30" createStartTime="1633397534216" createEndTime="1633397534227" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="51" UUID="70dd7aec-7155-4229-a1a6-1a5e43acfb80">
+    <avgValue type="java.lang.String" value="24.5601430429128739"/>
+    <maxValue type="java.lang.String" value="51"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="349" type="java.lang.String" value="5" percent="0.1134590377113134" otherValues="false"/>
+    <topNvalue count="191" type="java.lang.String" value="10" percent="0.06209362808842653" otherValues="false"/>
+    <topNvalue count="180" type="java.lang.String" value="44" percent="0.05851755526657997" otherValues="false"/>
+    <topNvalue count="152" type="java.lang.String" value="33" percent="0.0494148244473342" otherValues="false"/>
+    <topNvalue count="126" type="java.lang.String" value="39" percent="0.04096228868660598" otherValues="false"/>
+    <topNvalue count="116" type="java.lang.String" value="14" percent="0.0377113133940182" otherValues="false"/>
+    <topNvalue count="104" type="java.lang.String" value="11" percent="0.033810143042912875" otherValues="false"/>
+    <topNvalue count="103" type="java.lang.String" value="23" percent="0.033485045513654096" otherValues="false"/>
+    <topNvalue count="100" type="java.lang.String" value="36" percent="0.032509752925877766" otherValues="false"/>
+    <topNvalue count="94" type="java.lang.String" value="48" percent="0.0305591677503251" otherValues="false"/>
+    <topNvalue count="1561" type="java.lang.String" value="Other Values" percent="0.5074772431729518" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB50" createStartTime="1633397534229" createEndTime="1633397534284" exception="false" rowCount="51" UUID="d5922136-d8fa-43ef-b7ec-20d652be2672">
+   <column-profile-result ref-id="COL51" createStartTime="1633397534271" createEndTime="1633397534275" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="51" UUID="6b190c07-b346-40d9-871b-c817d3536875">
+    <avgValue type="java.lang.String" value="26.0000000000000000"/>
+    <maxValue type="java.lang.String" value="51"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="42" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="29" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="34" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="51" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="41" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="46" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="40" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="43" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="32" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="41" type="java.lang.String" value="Other Values" percent="0.803921568627451" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL52" createStartTime="1633397534276" createEndTime="1633397534280" exception="false" avgLength="2.0" minLength="2" maxLength="2" nullCount="0" distinctValueCount="51" UUID="d9d9ca45-cff1-449f-a7f7-5105b1dbef1d">
+    <maxValue type="java.lang.String" value="WY"/>
+    <minValue type="java.lang.String" value="AK"/>
+    <topNvalue count="1" type="java.lang.String" value="CA" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="NH" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="OR" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="TX" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="ND" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="NV" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="OH" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="KY" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="NY" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="HI" percent="0.0196078431372549" otherValues="false"/>
+    <topNvalue count="41" type="java.lang.String" value="Other Values" percent="0.803921568627451" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL53" createStartTime="1633397534280" createEndTime="1633397534283" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1" UUID="e49276c2-6785-4f58-ba9a-d6aea5e192f0">
+    <avgValue type="java.lang.String" value="1.00000000000000000000"/>
+    <maxValue type="java.lang.String" value="1"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="51" type="java.lang.String" value="1" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB45" createStartTime="1633397534287" createEndTime="1633397534347" exception="false" rowCount="1" UUID="a7ebad4e-4555-475b-9ae4-971b32163c78">
+   <column-profile-result ref-id="COL46" createStartTime="1633397534339" createEndTime="1633397534342" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1" UUID="6543a4c1-9060-40e7-ae2b-e8a6cd846fa9">
+    <avgValue type="java.lang.String" value="1.00000000000000000000"/>
+    <maxValue type="java.lang.String" value="1"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="1" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL47" createStartTime="1633397534343" createEndTime="1633397534347" exception="false" avgLength="2.0" minLength="2" maxLength="2" nullCount="0" distinctValueCount="1" UUID="e2476274-5787-484d-93cd-6b3e9fadd194">
+    <maxValue type="java.lang.String" value="US"/>
+    <minValue type="java.lang.String" value="US"/>
+    <topNvalue count="1" type="java.lang.String" value="US" percent="1.0" otherValues="false"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB5" createStartTime="1633397534349" createEndTime="1633397535660" exception="false" rowCount="10000" UUID="f41dd433-6497-4ce5-8127-c24497912f1b">
+   <column-profile-result ref-id="COL6" createStartTime="1633397534600" createEndTime="1633397534629" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="10000" UUID="98a1f4c5-3199-4fce-839e-b33830245646">
+    <avgValue type="java.lang.String" value="5000.5000000000000000"/>
+    <maxValue type="java.lang.String" value="10000"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="1" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="2" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="3" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="6" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="7" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="8" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="9" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="10" percent="1.0E-4" otherValues="false"/>
+    <topNvalue count="9990" type="java.lang.String" value="Other Values" percent="0.999" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL7" createStartTime="1633397534629" createEndTime="1633397534706" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1433" UUID="3815ec74-f779-4161-868f-b248a9f36c7b">
+    <avgValue type="java.lang.String" value="759.9279000000000000"/>
+    <maxValue type="java.lang.String" value="1433"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="209" type="java.lang.String" value="1239" percent="0.0209" otherValues="false"/>
+    <topNvalue count="183" type="java.lang.String" value="486" percent="0.0183" otherValues="false"/>
+    <topNvalue count="144" type="java.lang.String" value="1240" percent="0.0144" otherValues="false"/>
+    <topNvalue count="136" type="java.lang.String" value="1353" percent="0.0136" otherValues="false"/>
+    <topNvalue count="135" type="java.lang.String" value="49" percent="0.0135" otherValues="false"/>
+    <topNvalue count="132" type="java.lang.String" value="70" percent="0.0132" otherValues="false"/>
+    <topNvalue count="132" type="java.lang.String" value="24" percent="0.0132" otherValues="false"/>
+    <topNvalue count="132" type="java.lang.String" value="150" percent="0.0132" otherValues="false"/>
+    <topNvalue count="125" type="java.lang.String" value="1154" percent="0.0125" otherValues="false"/>
+    <topNvalue count="122" type="java.lang.String" value="1425" percent="0.0122" otherValues="false"/>
+    <topNvalue count="8550" type="java.lang.String" value="Other Values" percent="0.855" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL8" createStartTime="1633397534706" createEndTime="1633397534754" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="2804" UUID="0f11b29a-04d8-410b-a0e4-4b8fdb14e6ce">
+    <maxValue type="java.lang.String" value="2019-01-30"/>
+    <minValue type="java.lang.String" value="2003-09-01"/>
+    <topNvalue count="29" type="java.lang.String" value="2016-05-17" percent="0.0029" otherValues="false"/>
+    <topNvalue count="23" type="java.lang.String" value="2016-02-17" percent="0.0023" otherValues="false"/>
+    <topNvalue count="23" type="java.lang.String" value="2016-05-09" percent="0.0023" otherValues="false"/>
+    <topNvalue count="22" type="java.lang.String" value="2016-07-05" percent="0.0022" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="2015-05-26" percent="0.0021" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="2016-05-02" percent="0.0021" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="2016-05-18" percent="0.0021" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="2016-03-06" percent="0.0019" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="2016-04-18" percent="0.0019" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="2016-04-25" percent="0.0019" otherValues="false"/>
+    <topNvalue count="9783" type="java.lang.String" value="Other Values" percent="0.9783" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL9" createStartTime="1633397534754" createEndTime="1633397534771" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="5" UUID="42d378c9-1404-4927-a799-ad0630814429">
+    <avgValue type="java.lang.String" value="4.0841000000000000"/>
+    <maxValue type="java.lang.String" value="5"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="4840" type="java.lang.String" value="5" percent="0.484" otherValues="false"/>
+    <topNvalue count="2849" type="java.lang.String" value="4" percent="0.2849" otherValues="false"/>
+    <topNvalue count="1190" type="java.lang.String" value="3" percent="0.119" otherValues="false"/>
+    <topNvalue count="567" type="java.lang.String" value="1" percent="0.0567" otherValues="false"/>
+    <topNvalue count="554" type="java.lang.String" value="2" percent="0.0554" otherValues="false"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL10" createStartTime="1633397534771" createEndTime="1633397534781" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="0" UUID="6f3fd590-67a1-48d4-99f2-d76294b9835e">
+   </column-profile-result>
+   <column-profile-result ref-id="COL11" createStartTime="1633397534781" createEndTime="1633397535080" exception="false" avgLength="25.7125" minLength="2" maxLength="122" nullCount="0" distinctValueCount="8471" UUID="4e1fd2d5-5ef6-4669-b9df-debf679e180a">
+    <maxValue type="java.lang.String" value="Zippity ZaZa"/>
+    <minValue type="java.lang.String" value="&apos;Bout what you should expect"/>
+    <topNvalue count="49" type="java.lang.String" value="Great location" percent="0.0049" otherValues="false"/>
+    <topNvalue count="37" type="java.lang.String" value="Great Hotel" percent="0.0037" otherValues="false"/>
+    <topNvalue count="35" type="java.lang.String" value="Great Stay" percent="0.0035" otherValues="false"/>
+    <topNvalue count="27" type="java.lang.String" value="Great stay" percent="0.0027" otherValues="false"/>
+    <topNvalue count="27" type="java.lang.String" value="Great Location" percent="0.0027" otherValues="false"/>
+    <topNvalue count="25" type="java.lang.String" value="Great hotel" percent="0.0025" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="Great place to stay" percent="0.0021" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="Great stay!" percent="0.0019" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="Good location" percent="0.0019" otherValues="false"/>
+    <topNvalue count="18" type="java.lang.String" value="Nice Hotel" percent="0.0018" otherValues="false"/>
+    <topNvalue count="9723" type="java.lang.String" value="Other Values" percent="0.9723" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL12" createStartTime="1633397535080" createEndTime="1633397535160" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="9739" UUID="f726a38a-8f5c-435e-a785-632cd3c1e79b">
+    <avgValue type="java.lang.String" value="4887.6675000000000000"/>
+    <maxValue type="java.lang.String" value="9739"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="3" type="java.lang.String" value="917" percent="3.0E-4" otherValues="false"/>
+    <topNvalue count="3" type="java.lang.String" value="5141" percent="3.0E-4" otherValues="false"/>
+    <topNvalue count="3" type="java.lang.String" value="2001" percent="3.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="7645" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="7620" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="1233" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="7423" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="9037" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="9038" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="4558" percent="2.0E-4" otherValues="false"/>
+    <topNvalue count="9977" type="java.lang.String" value="Other Values" percent="0.9977" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL13" createStartTime="1633397535161" createEndTime="1633397535660" exception="false" avgLength="130.2983" minLength="86" maxLength="176" nullCount="0" distinctValueCount="8065" UUID="f85b4d18-efa0-45b9-8ebd-759b6e2b7bc8">
+    <maxValue type="java.lang.String" value="https://www.tripadvisor.com/ShowUserReviews-g29054-d2064885-r299669953-Holiday_Inn_Express_Hotel_Suites_Arkadelphia_Caddo_Valley-Arkadelphia_Arkansas.html"/>
+    <minValue type="java.lang.String" value="http://tripadvisor.com/Hotel_Review-g1127210-d817671-Reviews-WoodSpring_Suites_Jackson_South-Byram_Mississippi.html"/>
+    <topNvalue count="7" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g45667-d296424-Reviews-Horizon_Inn_Motel-Lincoln_Nebraska.html" percent="7.0E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g54897-d1075379-Reviews-Black_Bear_Cove_Resort-Benton_Tennessee.html" percent="6.0E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g60270-d1147455-Reviews-or10-GrandStay_Residential_Suites_Hotel_Sheboygan-Sheboygan_Wisconsin.html%25252523REVIEWS" percent="6.0E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g60878-d7736527-Reviews-or380-Hyatt_House_Seattle_Downtown-Seattle_Washington.html#REVIEWS" percent="6.0E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g46998-d79654-Reviews-or20-Chocolate_Turtle_Bed_and_Breakfast-Corrales_New_Mexico.html%2525252523REVIEWS" percent="5.0E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g42041-d1218783-Reviews-or10-Hampton_Inn_Suites_Detroit_Canton-Canton_Michigan.html%25252523REVIEWS" percent="5.0E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g51926-d1489807-Reviews-Flying_Arrow_Resort-Joseph_Oregon.html" percent="5.0E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g1798615-d209354-Reviews-or20-Beach_Retreat_Lodge_at_Tahoe-South_Lake_Tahoe_Lake_Tahoe_California_California.html%252523REVIEWS" percent="5.0E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="https://www.tripadvisor.com/Hotel_Review-g60956-d6884400-Reviews-or2150-Hotel_Emma-San_Antonio_Texas.html#REVIEWS" percent="5.0E-4" otherValues="false"/>
+    <topNvalue count="4" type="java.lang.String" value="http://www.tripadvisor.com/Hotel_Review-g58134-d72807-Reviews-or10-BEST_WESTERN_PLUS_Inn_at_Valley_View-Roanoke_Virginia.html%25252523REVIEWS" percent="4.0E-4" otherValues="false"/>
+    <topNvalue count="9946" type="java.lang.String" value="Other Values" percent="0.9946" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB16" createStartTime="1633397535662" createEndTime="1633397535723" exception="false" rowCount="235" UUID="fb2a62d6-628e-4e13-8934-cb43ad6c4029">
+   <column-profile-result ref-id="COL17" createStartTime="1633397535706" createEndTime="1633397535710" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="235" UUID="d9c99899-5218-487a-8473-e92c44650891">
+    <avgValue type="java.lang.String" value="118.0000000000000000"/>
+    <maxValue type="java.lang.String" value="235"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="184" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="116" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="87" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="51" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="70" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="190" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="176" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="169" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="92" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="180" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="225" type="java.lang.String" value="Other Values" percent="0.9574468085106383" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL18" createStartTime="1633397535710" createEndTime="1633397535722" exception="false" avgLength="16.88936170212766" minLength="3" maxLength="48" nullCount="0" distinctValueCount="235" UUID="117f3b83-8737-4fa7-9ec1-d36729bc5650">
+    <maxValue type="java.lang.String" value="Wine Country Hotels"/>
+    <minValue type="java.lang.String" value="Accommodation Reservations"/>
+    <topNvalue count="1" type="java.lang.String" value="Airports" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Wine Country Hotels" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Hotel Superstition Springs" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Bed and breakfast inns etc." percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Inn" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Motel and Hotel" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Hotel Resort and Spa" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Campgrounds" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Venues Event Spaces" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="Insurance" percent="0.00425531914893617" otherValues="false"/>
+    <topNvalue count="225" type="java.lang.String" value="Other Values" percent="0.9574468085106383" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB33" createStartTime="1633397535727" createEndTime="1633397535986" exception="false" rowCount="1433" UUID="2cc2ae62-4875-406c-8d36-7437b232f7d6">
+   <column-profile-result ref-id="COL34" createStartTime="1633397535797" createEndTime="1633397535810" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1433" UUID="135e8d52-dea4-4701-a96b-492c23acaa87">
+    <avgValue type="java.lang.String" value="717.0000000000000000"/>
+    <maxValue type="java.lang.String" value="1433"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="1269" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="652" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="273" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="51" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1091" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="951" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="839" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="70" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="1075" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="350" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1423" type="java.lang.String" value="Other Values" percent="0.9930216329378926" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL35" createStartTime="1633397535810" createEndTime="1633397535820" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="841" UUID="c7ba1226-b3cf-4afc-9b5a-44dffaafeaa9">
+    <avgValue type="java.lang.String" value="1271.4431263084438241"/>
+    <maxValue type="java.lang.String" value="3070"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="36" type="java.lang.String" value="172" percent="0.02512212142358688" otherValues="false"/>
+    <topNvalue count="33" type="java.lang.String" value="173" percent="0.023028611304954642" otherValues="false"/>
+    <topNvalue count="31" type="java.lang.String" value="826" percent="0.021632937892533146" otherValues="false"/>
+    <topNvalue count="22" type="java.lang.String" value="1273" percent="0.015352407536636426" otherValues="false"/>
+    <topNvalue count="17" type="java.lang.String" value="645" percent="0.011863224005582694" otherValues="false"/>
+    <topNvalue count="17" type="java.lang.String" value="2853" percent="0.011863224005582694" otherValues="false"/>
+    <topNvalue count="16" type="java.lang.String" value="895" percent="0.011165387299371946" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="70" percent="0.0104675505931612" otherValues="false"/>
+    <topNvalue count="15" type="java.lang.String" value="977" percent="0.0104675505931612" otherValues="false"/>
+    <topNvalue count="12" type="java.lang.String" value="1897" percent="0.00837404047452896" otherValues="false"/>
+    <topNvalue count="1219" type="java.lang.String" value="Other Values" percent="0.8506629448709002" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL36" createStartTime="1633397535820" createEndTime="1633397535862" exception="false" avgLength="5.226796929518493" minLength="5" maxLength="10" nullCount="0" distinctValueCount="1149" UUID="33b27bbd-aded-43ff-97ed-ed2ceed95ff4">
+    <maxValue type="java.lang.String" value="99801"/>
+    <minValue type="java.lang.String" value="02116-3104"/>
+    <topNvalue count="12" type="java.lang.String" value="96815" percent="0.00837404047452896" otherValues="false"/>
+    <topNvalue count="8" type="java.lang.String" value="92101" percent="0.005582693649685973" otherValues="false"/>
+    <topNvalue count="8" type="java.lang.String" value="70130" percent="0.005582693649685973" otherValues="false"/>
+    <topNvalue count="8" type="java.lang.String" value="80517" percent="0.005582693649685973" otherValues="false"/>
+    <topNvalue count="7" type="java.lang.String" value="94102" percent="0.004884856943475227" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="37863" percent="0.00418702023726448" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="70112" percent="0.00418702023726448" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="94109" percent="0.00418702023726448" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="37738" percent="0.0034891835310537334" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="98569" percent="0.0034891835310537334" otherValues="false"/>
+    <topNvalue count="1362" type="java.lang.String" value="Other Values" percent="0.9504535938590369" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL37" createStartTime="1633397535862" createEndTime="1633397535875" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1430" UUID="9271b72a-7bc9-42d7-a84f-34354ff3dad1">
+    <avgValue type="java.lang.String" value="37.3841582203111"/>
+    <maxValue type="java.lang.String" value="64.84359"/>
+    <minValue type="java.lang.String" value="19.438604"/>
+    <topNvalue count="2" type="java.lang.String" value="41.1356" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="33.8027" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="37.0561" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="37.7885" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="39.3093" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="40.722057" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="48.1166" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="40.57365" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="31.5748" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="42.73379" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1420" type="java.lang.String" value="Other Values" percent="0.9909281228192603" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL38" createStartTime="1633397535875" createEndTime="1633397535890" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="1431" UUID="d3ce6266-cd00-4a28-96cd-c6b0188916ba">
+    <avgValue type="java.lang.String" value="-98.23725991738233"/>
+    <maxValue type="java.lang.String" value="-71.07334"/>
+    <minValue type="java.lang.String" value="-159.4803"/>
+    <topNvalue count="2" type="java.lang.String" value="-81.4644" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="2" type="java.lang.String" value="-122.4093" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-94.8263" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-117.323326" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-122.33341" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-122.8727" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-73.9865" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-117.9236" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-122.3333" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="-119.7735" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1421" type="java.lang.String" value="Other Values" percent="0.9916259595254711" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL39" createStartTime="1633397535891" createEndTime="1633397535933" exception="false" avgLength="16.8053035589672" minLength="8" maxLength="43" nullCount="0" distinctValueCount="1432" UUID="a0c0d1f4-a8a1-407f-b847-35b9dc8c6930">
+    <maxValue type="java.lang.String" value="9985 Park Meadows Dr"/>
+    <minValue type="java.lang.String" value="1 4th St"/>
+    <topNvalue count="2" type="java.lang.String" value="539 Parkway" percent="0.0013956734124214933" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="9100 Aurora Ave N" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="6500 Redwood Dr" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="104 Kaanapali Shores Place" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="193 S Main St" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="6210 Hospitality Dr" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="3300 E Route 66" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="97 Bumbleberry Ln" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="584 N East St" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="605 Redmond Rd" percent="6.978367062107466E-4" otherValues="false"/>
+    <topNvalue count="1422" type="java.lang.String" value="Other Values" percent="0.9923237962316818" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL40" createStartTime="1633397535933" createEndTime="1633397535972" exception="false" avgLength="25.016050244242848" minLength="6" maxLength="67" nullCount="0" distinctValueCount="1311" UUID="19f12ca2-896b-4d5b-ae94-c7b446d7fd6a">
+    <maxValue type="java.lang.String" value="Z Bar Motel"/>
+    <minValue type="java.lang.String" value="11th Avenue Hotel Hostel"/>
+    <topNvalue count="27" type="java.lang.String" value="Quality Inn" percent="0.01884159106769016" otherValues="false"/>
+    <topNvalue count="20" type="java.lang.String" value="Econo Lodge" percent="0.013956734124214934" otherValues="false"/>
+    <topNvalue count="19" type="java.lang.String" value="Comfort Inn" percent="0.013258897418004187" otherValues="false"/>
+    <topNvalue count="8" type="java.lang.String" value="Comfort Suites" percent="0.005582693649685973" otherValues="false"/>
+    <topNvalue count="8" type="java.lang.String" value="Quality Inn Suites" percent="0.005582693649685973" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Rodeway Inn" percent="0.00418702023726448" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="Sleep Inn" percent="0.00418702023726448" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="Rodeway Inn Suites" percent="0.0034891835310537334" otherValues="false"/>
+    <topNvalue count="4" type="java.lang.String" value="Economy Inn" percent="0.0027913468248429866" otherValues="false"/>
+    <topNvalue count="4" type="java.lang.String" value="Best Western Executive Inn" percent="0.0027913468248429866" otherValues="false"/>
+    <topNvalue count="1326" type="java.lang.String" value="Other Values" percent="0.9253314724354501" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL41" createStartTime="1633397535972" createEndTime="1633397535975" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="0" UUID="c66a3866-b59c-4ba3-9431-c5e8ea8b2349">
+   </column-profile-result>
+   <column-profile-result ref-id="COL42" createStartTime="1633397535975" createEndTime="1633397535986" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="243" UUID="89116ddb-c5fd-4db4-92c9-013f37727cea">
+    <avgValue type="java.lang.String" value="121.20167480809491"/>
+    <maxValue type="java.lang.String" value="995.0"/>
+    <minValue type="java.lang.String" value="10.0"/>
+    <topNvalue count="61" type="java.lang.String" value="58.0" percent="0.04256803907885555" otherValues="false"/>
+    <topNvalue count="53" type="java.lang.String" value="101.0" percent="0.03698534542916958" otherValues="false"/>
+    <topNvalue count="38" type="java.lang.String" value="99.0" percent="0.026517794836008374" otherValues="false"/>
+    <topNvalue count="35" type="java.lang.String" value="119.0" percent="0.024424284717376135" otherValues="false"/>
+    <topNvalue count="29" type="java.lang.String" value="55.0" percent="0.020237264480111653" otherValues="false"/>
+    <topNvalue count="25" type="java.lang.String" value="129.0" percent="0.017445917655268667" otherValues="false"/>
+    <topNvalue count="25" type="java.lang.String" value="60.0" percent="0.017445917655268667" otherValues="false"/>
+    <topNvalue count="22" type="java.lang.String" value="90.0" percent="0.015352407536636426" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="109.0" percent="0.01465457083042568" otherValues="false"/>
+    <topNvalue count="21" type="java.lang.String" value="72.0" percent="0.01465457083042568" otherValues="false"/>
+    <topNvalue count="1103" type="java.lang.String" value="Other Values" percent="0.7697138869504536" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  <table-profile-result ref-id="TAB62" createStartTime="1633397535987" createEndTime="1633397536395" exception="false" rowCount="11788" UUID="7ed00277-e349-4d70-a6ac-58454d3821c9">
+   <column-profile-result ref-id="COL63" createStartTime="1633397536283" createEndTime="1633397536311" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="11788" UUID="7a8340d4-f630-4f7f-985f-5e023d0d3381">
+    <avgValue type="java.lang.String" value="5894.5000000000000000"/>
+    <maxValue type="java.lang.String" value="11788"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="1" type="java.lang.String" value="6114" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="11233" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4790" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="273" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="11719" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="3936" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5761" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="5468" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="7662" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="1" type="java.lang.String" value="4326" percent="8.483203257550051E-5" otherValues="false"/>
+    <topNvalue count="11778" type="java.lang.String" value="Other Values" percent="0.999151679674245" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL64" createStartTime="1633397536311" createEndTime="1633397536332" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="214" UUID="0bf0a456-a068-43ce-af51-04aeca45d042">
+    <maxValue type="java.lang.String" value="2019-02-01"/>
+    <minValue type="java.lang.String" value="2015-05-21"/>
+    <topNvalue count="1111" type="java.lang.String" value="2018-12-15" percent="0.09424838819138107" otherValues="false"/>
+    <topNvalue count="1082" type="java.lang.String" value="2018-08-26" percent="0.09178825924669155" otherValues="false"/>
+    <topNvalue count="891" type="java.lang.String" value="2018-12-14" percent="0.07558534102477095" otherValues="false"/>
+    <topNvalue count="760" type="java.lang.String" value="2018-11-30" percent="0.06447234475738038" otherValues="false"/>
+    <topNvalue count="504" type="java.lang.String" value="2018-12-03" percent="0.04275534441805225" otherValues="false"/>
+    <topNvalue count="436" type="java.lang.String" value="2018-11-09" percent="0.03698676620291822" otherValues="false"/>
+    <topNvalue count="421" type="java.lang.String" value="2018-11-06" percent="0.03571428571428571" otherValues="false"/>
+    <topNvalue count="411" type="java.lang.String" value="2018-12-02" percent="0.034865965388530706" otherValues="false"/>
+    <topNvalue count="268" type="java.lang.String" value="2018-11-11" percent="0.022734984730234137" otherValues="false"/>
+    <topNvalue count="259" type="java.lang.String" value="2018-12-22" percent="0.021971496437054632" otherValues="false"/>
+    <topNvalue count="5645" type="java.lang.String" value="Other Values" percent="0.4788768238887004" otherValues="true"/>
+   </column-profile-result>
+   <column-profile-result ref-id="COL65" createStartTime="1633397536332" createEndTime="1633397536395" exception="false" avgLength="0.0" minLength="0" maxLength="0" nullCount="0" distinctValueCount="10000" UUID="0b7a5737-64f7-485d-b7fe-637c3bd6905a">
+    <avgValue type="java.lang.String" value="5014.6224974550390227"/>
+    <maxValue type="java.lang.String" value="10000"/>
+    <minValue type="java.lang.String" value="1"/>
+    <topNvalue count="6" type="java.lang.String" value="3179" percent="5.089921954530031E-4" otherValues="false"/>
+    <topNvalue count="6" type="java.lang.String" value="8440" percent="5.089921954530031E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="1174" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="9461" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="1175" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="8425" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="3223" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="9455" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="9452" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="5" type="java.lang.String" value="536" percent="4.2416016287750253E-4" otherValues="false"/>
+    <topNvalue count="11736" type="java.lang.String" value="Other Values" percent="0.995588734306074" otherValues="true"/>
+   </column-profile-result>
+  </table-profile-result>
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
