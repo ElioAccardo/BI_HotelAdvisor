@@ -1,13 +1,13 @@
-insert into dim_data
-select to_number(to_char(datum,'yyyymmdd'), '99999999') as sk_data,
-datum as nk_data,
-extract(day from datum) as nr_dia,
-extract(month from datum) as nr_mes,
-extract (year from datum) as nr_ano
-from (
----incluir aqui a data de início do script, criaremos 15 anos de datas
-select '2003-01-01'::date + sequence.day as datum
-from generate_series(0,6208) as sequence(day)
-group by sequence.day
+INSERT INTO dim_data
+SELECT TO_NUMBER(TO_CHAR(datum,'yyyymmdd'), '99999999') AS sk_data,
+datum AS nk_data,
+EXTRACT(DAY FROM datum) AS nr_dia,
+EXTRACT(MONTH FROM datum) AS nr_mes,
+EXTRACT (YEAR FROM datum) AS nr_ano
+FROM (
+---Data de início do script 01/01/2003, criamos 16 anos de datas:
+SELECT '2003-01-01'::DATE + SEQUENCE DAY AS datum
+FROM GENERATE_SERIES(0,6208) AS SEQUENCE(DAY)
+GROUP BY SEQUENCE.DAY
 ) dq
-order by 1;
+ORDER BY 1;
