@@ -4,8 +4,8 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="dw_hotel_advisor" />
    <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="Modelo de Dados" />
    <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/dw_hotel_advisor" />
    <property key="UID" value="postgres" />
    <property key="PWD" value="postgres" />
@@ -16,8 +16,8 @@
    <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
   </data-source>
   <data-source id="DS0">
-   <property key="Logical" value="dw_hotel_advisor" />
    <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="Modelo de Dados" />
    <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/dw_hotel_advisor" />
    <property key="UID" value="postgres" />
    <property key="PWD" value="postgres" />
@@ -41,7 +41,7 @@
   </data-source>
  </project-data-sources>
  <source-databases>
-  <database id="DB0" populated="true" UUID="f586a572-0052-43a2-85fc-5bde6ae76d74" dbcs-ref="DS0" name="dw_hotel_advisor" physicalName="dw_review" >
+  <database id="DB0" populated="true" UUID="f586a572-0052-43a2-85fc-5bde6ae76d74" dbcs-ref="DS0" name="Modelo de Dados" physicalName="dw_review" >
    <catalog id="CAT1" populated="false" UUID="facac1e4-6cfb-4814-b411-fcf879feed0c" name="dw_hotel_reviews" nativeTerm="database" physicalName="dw_hotel_reviews" >
    </catalog>
    <relationships>
@@ -70,7 +70,7 @@
     <column id="COL9" populated="true" UUID="8cc253db-6fea-4294-abd7-bcfa74460791" autoIncrement="false" autoIncrementSequenceName="ft_avaliacao_titulo_seq" defaultValue="" name="titulo" nullable="0" physicalName="titulo" precision="150" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL10" populated="true" UUID="a652429e-49fe-4d76-9644-81cfcd749628" autoIncrement="false" autoIncrementSequenceName="ft_avaliacao_texto_seq" defaultValue="" name="texto" nullable="0" physicalName="texto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL10" populated="true" UUID="a652429e-49fe-4d76-9644-81cfcd749628" autoIncrement="false" autoIncrementSequenceName="ft_avaliacao_texto_seq" defaultValue="" name="texto" nullable="0" physicalName="texto" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
      <remarks></remarks>
     </column>
     <column id="COL11" populated="true" UUID="6fdd868f-7357-4d48-b71f-4597130831e4" autoIncrement="false" autoIncrementSequenceName="ft_avaliacao_pontuacao_seq" defaultValue="" name="pontuacao" nullable="0" physicalName="pontuacao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -104,10 +104,10 @@
     <column id="COL18" populated="true" UUID="8c91dcb6-d2c8-4041-a06c-1ed944c9133d" autoIncrement="false" autoIncrementSequenceName="dim_hotel_nk_id_hotel_seq" defaultValue="" name="nk_id_hotel" nullable="0" physicalName="nk_id_hotel" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL19" populated="true" UUID="cc449ff1-e127-4ed6-a691-5bd22742bda0" autoIncrement="false" autoIncrementSequenceName="dim_hotel_latitude_seq" defaultValue="" name="latitude" nullable="0" physicalName="latitude" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+    <column id="COL19" populated="true" UUID="cc449ff1-e127-4ed6-a691-5bd22742bda0" autoIncrement="false" autoIncrementSequenceName="dim_hotel_latitude_seq" defaultValue="" name="latitude" nullable="0" physicalName="latitude" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
      <remarks></remarks>
     </column>
-    <column id="COL20" populated="true" UUID="0b81b55f-3a74-487b-a74e-61ea48fd6bd4" autoIncrement="false" autoIncrementSequenceName="dim_hotel_longitude_seq" defaultValue="" name="longitude" nullable="0" physicalName="longitude" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+    <column id="COL20" populated="true" UUID="0b81b55f-3a74-487b-a74e-61ea48fd6bd4" autoIncrement="false" autoIncrementSequenceName="dim_hotel_longitude_seq" defaultValue="" name="longitude" nullable="0" physicalName="longitude" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
      <remarks></remarks>
     </column>
     <column id="COL21" populated="true" UUID="8a528b57-2c28-486f-baa5-83f4144897db" autoIncrement="false" autoIncrementSequenceName="dim_hotel_endereco_seq" defaultValue="" name="endereco" nullable="0" physicalName="endereco" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -128,10 +128,10 @@
     <column id="COL26" populated="true" UUID="2e83815e-2d5d-4680-a10d-b543800215f4" autoIncrement="false" autoIncrementSequenceName="dim_hotel_pais_seq" defaultValue="" name="pais" nullable="0" physicalName="pais" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL27" populated="true" UUID="c6381dd6-b1af-4558-8ece-cfd8b663d492" autoIncrement="false" autoIncrementSequenceName="dim_hotel_site_hotel_seq" defaultValue="" name="site_hotel" nullable="0" physicalName="site_hotel" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL27" populated="true" UUID="c6381dd6-b1af-4558-8ece-cfd8b663d492" autoIncrement="false" autoIncrementSequenceName="dim_hotel_site_hotel_seq" defaultValue="" name="site_hotel" nullable="0" physicalName="site_hotel" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="2005" userDefinedTypeUUID="9c22ed40-2868-4d9e-96ca-789234a53c8f" >
      <remarks></remarks>
     </column>
-    <column id="COL28" populated="true" UUID="b3b36a5a-9f7c-4d05-8751-f3d6eee2da69" autoIncrement="false" autoIncrementSequenceName="hotel_valor_medio_seq" defaultValue="" name="valor_medio" nullable="0" physicalName="valor_medio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+    <column id="COL28" populated="true" UUID="b3b36a5a-9f7c-4d05-8751-f3d6eee2da69" autoIncrement="false" autoIncrementSequenceName="hotel_valor_medio_seq" defaultValue="" name="valor_medio" nullable="0" physicalName="valor_medio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="7" userDefinedTypeUUID="8fe516a5-9833-4170-9572-50e78bbf221f" >
      <remarks></remarks>
     </column>
     </folder>
@@ -218,14 +218,14 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="dw_hotel_advisor"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="dw_hotel_advisor"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027201" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB5" x="502" y="203" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB16" x="147" y="182" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB31" x="853" y="226" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB40" x="512" y="458" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+ <play-pen zoom="1.6817928305074274" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB5" x="370" y="170" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB16" x="22" y="149" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB31" x="715" y="194" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB40" x="382" y="415" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-link relationship-ref="REL50" pkConnection="0.4881889763779528" fkConnection="0.4954954954954955" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL48" pkConnection="0.4927536231884058" fkConnection="0.5039370078740157" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL52" pkConnection="0.5" fkConnection="0.49356223175965663" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
